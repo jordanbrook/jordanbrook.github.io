@@ -21,6 +21,6 @@ I'm a research scientist specialising in severe weather, data assimilation, and 
 
 I bring a strong computational and physical sciences background to my work, combined with practical experience in private industry, in the field, and in our operational weather service.
 
-I hold a Ph.D. in Atmospheric Sciences from the University of Queensland, where my dissertation on hailstorms and weather radars won the Dean’s Award for Outstanding Thesis. Nowadays, I'm focused on assimilating radar data into convection-allowing models to improve forecasts of severe weather.
+I hold a Ph.D. in Atmospheric Sciences from the University of Queensland, where my thesis investigated hailstorms using weather radars. Nowadays, I'm focused on assimilating radar data into convection-allowing models to improve forecasts of severe weather.
 
 
