@@ -1,5 +1,5 @@
-{% assign repo = site.data['github_metadata']['repos'][include.repository] %}
-{% assign repo_url = include.repository | split: '/' %}
+{% assign repo = include.repo %}
+{% assign repo_url = repo.repository | split: '/' %}
 {% if site.data.repositories.github_users contains repo_url.first %}
   {% assign show_owner = false %}
 {% else %}
@@ -35,11 +35,11 @@
       </div>
     </a>
   {% else %}
-    <a class="repo-card" href="https://github.com/{{ include.repository }}">
+    <a class="repo-card" href="https://github.com/{{ repo.repository }}">
       <div class="repo-card__topline">
         <span class="repo-card__eyebrow">Repository</span>
       </div>
-      <h3 class="repo-card__title">{{ include.repository }}</h3>
+      <h3 class="repo-card__title">{{ repo.repository }}</h3>
     </a>
   {% endif %}
 </div>

@@ -1,6 +1,5 @@
 users:
-  jordanbrook:
-    username: jordanbrook
+  - username: jordanbrook
     name: Jordan Brook
     html_url: https://github.com/jordanbrook
     avatar_url: https://github.com/jordanbrook.png?size=160
@@ -19,7 +18,7 @@ users:
       - C
 
 repos:
-  jordanbrook/pymeso:
+  - repository: jordanbrook/pymeso
     name: PyMeso
     full_name: jordanbrook/pymeso
     html_url: https://github.com/jordanbrook/pymeso
@@ -28,7 +27,7 @@ repos:
     stars: 15
     forks: 3
     issues: 0
-  jordanbrook/leroi:
+  - repository: jordanbrook/leroi
     name: leroi
     full_name: jordanbrook/leroi
     html_url: https://github.com/jordanbrook/leroi

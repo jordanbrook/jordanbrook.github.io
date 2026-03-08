@@ -99,8 +99,7 @@ $yamlLines = @("users:")
 
 foreach ($username in $config.Users) {
     $user = Get-UserSummary -Username $username
-    $yamlLines += "  $($user.username):"
-    $yamlLines += "    username: $($user.username)"
+    $yamlLines += "  - username: $($user.username)"
     if ($user.name) { $yamlLines += "    name: `"$($user.name)`"" }
     $yamlLines += "    html_url: $($user.html_url)"
     $yamlLines += "    avatar_url: $($user.avatar_url)"
@@ -122,7 +121,7 @@ $yamlLines += "repos:"
 
 foreach ($repository in $config.Repos) {
     $repo = Get-RepoSummary -Repository $repository
-    $yamlLines += "  $repository:"
+    $yamlLines += "  - repository: $repository"
     $yamlLines += "    name: `"$($repo.name)`""
     $yamlLines += "    full_name: $($repo.full_name)"
     $yamlLines += "    html_url: $($repo.html_url)"

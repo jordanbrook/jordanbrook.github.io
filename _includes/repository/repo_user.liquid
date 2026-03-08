@@ -1,4 +1,4 @@
-{% assign user = site.data['github_metadata']['users'][include.username] %}
+{% assign user = include.user %}
 
 <div class="repo p-2">
   {% if user %}
@@ -29,12 +29,12 @@
       </div>
     </a>
   {% else %}
-    <a class="repo-card repo-card-user" href="https://github.com/{{ include.username }}">
+    <a class="repo-card repo-card-user" href="https://github.com/{{ user.username }}">
       <div class="repo-card__topline">
         <span class="repo-card__eyebrow">GitHub Profile</span>
-        <span class="repo-card__pill">@{{ include.username }}</span>
+        <span class="repo-card__pill">@{{ user.username }}</span>
       </div>
-      <h3 class="repo-card__title">{{ include.username }}</h3>
+      <h3 class="repo-card__title">{{ user.username }}</h3>
     </a>
   {% endif %}
 </div>
