@@ -1,6 +1,6 @@
 param(
     [string]$RepositoriesConfig = "_data/repositories.yml",
-    [string]$OutputPath = "_data/github-metadata.yml"
+    [string]$OutputPath = "_data/github_metadata.yml"
 )
 
 $ErrorActionPreference = "Stop"
