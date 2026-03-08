@@ -1,14 +1,40 @@
-<div class="repo p-2 text-center">
-  <a href="https://github.com/{{ include.username }}">
-    <img
-      class="repo-img-light w-100"
-      alt="{{ include.username }}"
-      src="https://github-readme-stats.vercel.app/api/?username={{ include.username }}&theme={{ site.repo_theme_light }}&show_icons=true"
-    >
-    <img
-      class="repo-img-dark w-100"
-      alt="{{ include.username }}"
-      src="https://github-readme-stats.vercel.app/api/?username={{ include.username }}&theme={{ site.repo_theme_dark }}&show_icons=true"
-    >
-  </a>
+{% assign user = site.data.github_metadata.users[include.username] %}
+
+<div class="repo p-2">
+  {% if user %}
+    <a class="repo-card repo-card-user" href="{{ user.html_url }}">
+      <div class="repo-card__topline">
+        <span class="repo-card__eyebrow">GitHub Profile</span>
+        <span class="repo-card__pill">@{{ user.username }}</span>
+      </div>
+
+      <div class="repo-card__profile">
+        <img class="repo-card__avatar" src="{{ user.avatar_url }}" alt="{{ user.name | default: user.username }}">
+        <div>
+          <h3 class="repo-card__title">{{ user.name | default: user.username }}</h3>
+          {% if user.bio %}
+            <p class="repo-card__description">{{ user.bio }}</p>
+          {% endif %}
+          {% if user.location %}
+            <p class="repo-card__subtle">{{ user.location }}</p>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="repo-card__stats">
+        <span><strong>{{ user.public_repos }}</strong> repos</span>
+        <span><strong>{{ user.stars }}</strong> stars</span>
+        <span><strong>{{ user.followers }}</strong> followers</span>
+        <span><strong>{{ user.following }}</strong> following</span>
+      </div>
+    </a>
+  {% else %}
+    <a class="repo-card repo-card-user" href="https://github.com/{{ include.username }}">
+      <div class="repo-card__topline">
+        <span class="repo-card__eyebrow">GitHub Profile</span>
+        <span class="repo-card__pill">@{{ include.username }}</span>
+      </div>
+      <h3 class="repo-card__title">{{ include.username }}</h3>
+    </a>
+  {% endif %}
 </div>

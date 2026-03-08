@@ -1,0 +1,39 @@
+users:
+  jordanbrook:
+    username: jordanbrook
+    name: Jordan Brook
+    html_url: https://github.com/jordanbrook
+    avatar_url: https://github.com/jordanbrook.png?size=160
+    bio: Research Scientist at BoM
+    location: Brisbane, Queensland, Australia
+    public_repos: 8
+    stars: 46
+    followers: 10
+    following: 11
+    achievements:
+      - YOLO x2
+      - Pro
+    top_languages:
+      - Jupyter Notebook
+      - Python
+      - C
+
+repos:
+  jordanbrook/pymeso:
+    name: PyMeso
+    full_name: jordanbrook/pymeso
+    html_url: https://github.com/jordanbrook/pymeso
+    description: An implementation of a method to discretise mesoscale circulations in environmental systems.
+    language: Jupyter Notebook
+    stars: 15
+    forks: 3
+    issues: 0
+  jordanbrook/leroi:
+    name: leroi
+    full_name: jordanbrook/leroi
+    html_url: https://github.com/jordanbrook/leroi
+    description: Implementation of a radar gridding algorithm.
+    language: Jupyter Notebook
+    stars: 4
+    forks: 1
+    issues: 2

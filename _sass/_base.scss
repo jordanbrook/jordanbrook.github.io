@@ -505,6 +505,131 @@ footer.sticky-bottom {
   .repo {
     max-width: 50%;
   }
+
+  .repo.repo-wide {
+    max-width: 100%;
+  }
+}
+
+.repo {
+  width: 100%;
+}
+
+.repo-card {
+  display: block;
+  width: 100%;
+  min-height: 100%;
+  padding: 1.25rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 1rem;
+  background-color: var(--global-bg-color);
+  background-image: linear-gradient(180deg, rgba(25, 118, 210, 0.08), transparent 55%);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+  color: var(--global-text-color);
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+
+  &:hover {
+    color: var(--global-text-color);
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 22px 50px rgba(15, 23, 42, 0.12);
+    border-color: var(--global-theme-color);
+  }
+}
+
+.repo-card__topline,
+.repo-card__stats,
+.repo-card__badges,
+.repo-card__languages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.repo-card__topline {
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.9rem;
+}
+
+.repo-card__eyebrow {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--global-theme-color);
+}
+
+.repo-card__pill,
+.repo-card__badges span,
+.repo-card__languages span {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid var(--global-divider-color);
+  background: rgba(15, 23, 42, 0.04);
+  color: var(--global-text-color-light);
+  font-size: 0.82rem;
+}
+
+.repo-card__profile {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.repo-card__avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 1rem;
+  object-fit: cover;
+  border: 1px solid var(--global-divider-color);
+}
+
+.repo-card__title {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--global-text-color);
+}
+
+.repo-card__description {
+  margin: 0.55rem 0 0;
+  color: var(--global-text-color);
+  line-height: 1.5;
+}
+
+.repo-card__subtle {
+  margin: 0.45rem 0 0;
+  color: var(--global-text-color-light);
+  font-size: 0.92rem;
+}
+
+.repo-card__stats {
+  margin-top: 1rem;
+}
+
+.repo-card__stats span {
+  display: inline-flex;
+  gap: 0.3rem;
+  align-items: baseline;
+  padding: 0.45rem 0.7rem;
+  border-radius: 0.8rem;
+  background: rgba(15, 23, 42, 0.04);
+  color: var(--global-text-color-light);
+  font-size: 0.9rem;
+}
+
+.repo-card__stats strong {
+  color: var(--global-text-color);
+}
+
+.repo-card__badges,
+.repo-card__languages {
+  margin-top: 0.85rem;
 }
 
 // Blog

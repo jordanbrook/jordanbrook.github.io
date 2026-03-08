@@ -1,3 +1,4 @@
+{% assign repo = site.data.github_metadata.repos[include.repository] %}
 {% assign repo_url = include.repository | split: '/' %}
 {% if site.data.repositories.github_users contains repo_url.first %}
   {% assign show_owner = false %}
@@ -5,23 +6,40 @@
   {% assign show_owner = true %}
 {% endif %}
 
-{% if site.data.repositories.repo_description_lines_max %}
-  {% assign max_lines = site.data.repositories.repo_description_lines_max %}
-{% else %}
-  {% assign max_lines = 2 %}
-{% endif %}
+<div class="repo p-2">
+  {% if repo %}
+    <a class="repo-card" href="{{ repo.html_url }}">
+      <div class="repo-card__topline">
+        <span class="repo-card__eyebrow">Repository</span>
+        {% if repo.language %}
+          <span class="repo-card__pill">{{ repo.language }}</span>
+        {% endif %}
+      </div>
 
-<div class="repo p-2 text-center">
-  <a href="https://github.com/{{ include.repository }}">
-    <img
-      class="repo-img-light w-100"
-      alt="{{ include.repository }}"
-      src="https://github-readme-stats.vercel.app/api/pin/?username={{ repo_url[0] }}&repo={{ repo_url[1] }}&theme={{ site.repo_theme_light }}&show_owner={{ show_owner }}&description_lines_count={{ max_lines }}"
-    >
-    <img
-      class="repo-img-dark w-100"
-      alt="{{ include.repository }}"
-      src="https://github-readme-stats.vercel.app/api/pin/?username={{ repo_url[0] }}&repo={{ repo_url[1] }}&theme={{ site.repo_theme_dark }}&show_owner={{ show_owner }}&description_lines_count={{ max_lines }}"
-    >
-  </a>
+      <h3 class="repo-card__title">
+        {% if show_owner %}
+          {{ repo.full_name }}
+        {% else %}
+          {{ repo.name }}
+        {% endif %}
+      </h3>
+
+      {% if repo.description %}
+        <p class="repo-card__description">{{ repo.description }}</p>
+      {% endif %}
+
+      <div class="repo-card__stats">
+        <span><strong>{{ repo.stars }}</strong> stars</span>
+        <span><strong>{{ repo.forks }}</strong> forks</span>
+        <span><strong>{{ repo.issues }}</strong> issues</span>
+      </div>
+    </a>
+  {% else %}
+    <a class="repo-card" href="https://github.com/{{ include.repository }}">
+      <div class="repo-card__topline">
+        <span class="repo-card__eyebrow">Repository</span>
+      </div>
+      <h3 class="repo-card__title">{{ include.repository }}</h3>
+    </a>
+  {% endif %}
 </div>
