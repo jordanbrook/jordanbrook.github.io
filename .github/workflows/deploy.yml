@@ -63,11 +63,28 @@ jobs:
         with:
           python-version: "3.13"
           cache: "pip" # caching pip dependencies
+      - name: Setup ImageMagick 🖼️
+        # jekyll-imagemagick shells out to `convert` to make the responsive .webp images, and skips
+        # them silently if it is missing (newer runner images no longer ship ImageMagick).
+        run: |
+          if ! command -v convert >/dev/null; then
+            sudo apt-get update
+            sudo apt-get install -y imagemagick
+          fi
+          # ImageMagick 7 may only provide `magick`, which accepts the same arguments
+          if ! command -v convert >/dev/null && command -v magick >/dev/null; then
+            printf '#!/bin/sh\nexec magick "$@"\n' | sudo tee /usr/local/bin/convert >/dev/null
+            sudo chmod +x /usr/local/bin/convert
+          fi
+          convert -version
+          convert -list format | grep -E '^ *WEBP'
       - name: Install and Build 🔧
         run: |
           pip3 install --upgrade nbconvert
           export JEKYLL_ENV=production
           bundle exec jekyll build
+          # fail before deploying if the responsive images were not generated
+          ls _site/assets/img/*-480.webp
       - name: Purge unused CSS 🧹
         run: |
           npm install -g purgecss
