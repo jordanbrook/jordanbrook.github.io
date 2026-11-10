@@ -4,12 +4,10 @@
     "label": "Research Scientist",
     "image": "",
     "email": "jordan.brook@bom.gov.au",
-    "phone": "+61 425 551 011",
     "url": "https://jordanbrook.github.io",
     "summary": "Research scientist with a background in physics and computational science working on data assimilation in numerical weather prediction models",
     "location": {
       "address": "Brisbane",
-      "postalCode": "4120",
       "city": "Brisbane",
       "countryCode": "AUS",
       "region": "Queensland"
@@ -18,7 +16,7 @@
       {
         "network": "github",
         "username": "jordanbrook",
-        "url": "https://jordanbrook.github.io"
+        "url": "https://github.com/jordanbrook"
       }
     ]
   },
@@ -32,12 +30,12 @@
       "highlights": []
     },
     {
-        "name": "Bureau of Meteorology",
-        "location": "Brisbane, Australia",
-        "position": "Research Scientist",
-        "startDate": "2023",
-        "summary": "Developing ensemble data assimilation methods for assimilating radar data into convection-allowing numerical weather prediction models. Also involved in radar quality control and hail science.",
-        "highlights": []
+      "name": "Bureau of Meteorology",
+      "location": "Brisbane, Australia",
+      "position": "Research Scientist",
+      "startDate": "2023",
+      "summary": "Developing ensemble data assimilation methods for assimilating radar data into convection-allowing numerical weather prediction models. Also involved in radar quality control and hail science.",
+      "highlights": []
     }
   ],
   "education": [
@@ -79,21 +77,21 @@
     },
     {
       "title": "Dean's Award for Outstanding PhD Thesis",
-      "date": "2023",
+      "date": "2024",
       "awarder": "University of Queensland",
       "summary": "This award gives formal recognition to outstanding PhD graduates nominated by their thesis examiners."
     },
     {
-      "title": "Dean's Commendation for Academic Excellence",
-      "date": "2018",
-      "awarder": "University of Queensland",
-      "summary": "Recognising outstanding academic performance"
-    },
-    {
       "title": "University of Queensland Excellence Scholarship",
-      "date": "2017",
+      "date": "2015–2018",
       "awarder": "University of Queensland",
       "summary": "Awarded based on academic and leadership achievements"
+    },
+    {
+      "title": "Dean's Commendation for Academic Excellence",
+      "date": "2015 & 2018",
+      "awarder": "University of Queensland",
+      "summary": "Recognising outstanding academic performance"
     },
     {
       "title": "Australian Students Prize",

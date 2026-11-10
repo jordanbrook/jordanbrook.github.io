@@ -6,13 +6,13 @@ title: blank # the website title (if blank, full name will be used instead)
 first_name: Jordan
 middle_name:
 last_name: Brook
-email: jordanbrook@bom.gov.au
+email: jordan.brook@bom.gov.au
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+  Jordan Brook is a research scientist at the Bureau of Meteorology working on severe weather, radar meteorology and radar data assimilation.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-keywords: thunderstorm, data-assimilation, academic-website, bureau-of-meteorology # add your own keywords or leave empty
+keywords: thunderstorms, hail, weather radar, data assimilation, numerical weather prediction, Bureau of Meteorology # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ☁️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
@@ -235,23 +235,19 @@ exclude:
   - _pages/profiles.md
   - _pages/projects.md
   - bin/
-  - CONTRIBUTING.md
-  - CUSTOMIZE.md
   - Dockerfile
   - docker-compose.yml
   - docker-compose-slim.yml
-  - FAQ.md
   - Gemfile
   - Gemfile.lock
-  - INSTALL.md
   - LICENSE
-  - lighthouse_results/
   - package.json
-  - package-lock.json
   - _pages/about_einstein.md
   - purgecss.config.js
+  - requirements.txt
+  - node_modules/
+  - _ignore/
   - README.md
-  - readme_preview/
   - vendor
 keep_files:
   - CNAME
@@ -291,7 +287,7 @@ sass:
 # -----------------------------------------------------------------------------
 
 jekyll-minifier:
-  exclude: ["robots.txt", "assets/js/search/*.js", "assets/libs/**/*"]
+  exclude: ["robots.txt", "assets/js/search/*.js", "assets/js/distillpub/*.js", "assets/libs/**/*"]
   uglifier_args:
     harmony: true
 
@@ -325,7 +321,7 @@ scholar:
   locale: en
 
   source: /_bibliography/
-  bibliography: Brook_2024.bib
+  bibliography: papers.bib
   bibliography_template: bib
   # Note: if you have latex math in your bibtex, the latex filter
   # preprocessing may conflict with MathJAX if the latter is enabled.
