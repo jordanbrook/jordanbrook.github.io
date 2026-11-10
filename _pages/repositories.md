@@ -2,7 +2,7 @@
 layout: page
 permalink: /software/
 title: software
-description: Most of my software development is done on our internal codesharing platform, but here are some examples of public github repositories I've developed. 
+description: Most of my software development is done on our internal codesharing platform, but here are some examples of public github repositories I've developed.
 nav: true
 nav_order: 4
 ---
